@@ -1,0 +1,35 @@
+p.agregar	{
+	margin:15px 0 0 0;
+	width:750px;
+}
+
+.listados	{
+	margin:15px 0 0 0;
+	width:750px;
+}
+
+.listados tr.cabecera	{
+	background-color:#326395;
+	/*background: url(../../images/bk-cabeceras.jpg) repeat-x;*/
+}
+
+.listados tr.cabecera td	{
+	font: BOLD 10pt Tahoma;
+	color:#fff;
+}
+
+.listados tr.oscuro	{
+	background-color:#fff0e1;
+}
+
+.listados tr td	{
+	/*height:25px;*/
+	/*border-bottom:1px solid #ccc;*/
+	padding:5px 0 5px 5px;
+	font: 10pt Tahoma;
+}
+
+.listados tr td.delmod	{
+	text-align:center;
+	width:18px;
+}

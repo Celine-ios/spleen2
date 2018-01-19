@@ -1,0 +1,242 @@
+/*********************************
+formularios en gral
+*********************************/
+#content #main form	{
+	margin:15px 0 0 0;
+	padding:0;
+	width:750px;
+}
+
+#content #main #buscador form {
+	margin:0 0 0 0;
+	padding:0;
+}
+
+#content #main form div	{
+	margin:10px 0 10px 0;
+}
+
+
+#content #main form h3	{
+	margin:0 0 10px 0;
+	padding: 0 0 0 20px;
+	height:20px;
+	font: bold 10pt Tahoma;
+	color: #ff6600;
+	border-bottom:1px solid #ccc;
+	text-transform: uppercase;
+}
+
+#content #main form div label	{
+	margin:0 5px 0 0;
+	display:block;
+	width:180px;
+	height:18px;
+	float:left;
+	text-align:right;
+}
+
+#content #main form div input	{
+	border:1px solid #ccc;
+	height:18px;
+	background: url(../../images/fondo_boxes.gif) repeat-x bottom;
+	font:9pt Tahoma;
+	color:#666;
+	width:200px;
+	text-indent:2px;
+}
+
+/*
+#content #main form div input.btn	{
+	text-indent:0;
+	border:none;
+	background:none;
+	background-color:#2F5980;
+	font:10pt Tahoma;
+	color:#fff;
+}
+*/
+#content #main form div textarea	{
+	border:1px solid #ccc;
+	background: url(../../images/fondo_boxes.gif) repeat-x bottom;
+	font:8pt Tahoma;
+	color:#666;
+	width:400px;
+	height:200px;
+}
+
+#content #main form div input.checks	{
+	width:18px;
+	height:18px;
+	background:none;
+	border:none;
+}
+
+#content #main form div input.file	{
+	border:1px solid #ccc;
+	width:200px;
+	height:21px;
+	background: url(../../images/fondo_boxes.gif) repeat-x bottom;
+	font:11px Tahoma;
+	color:#666;
+	width:200px;
+	text-indent:2px;
+}
+
+#content #main form div select	{
+	width:200px;
+	height:auto;
+	font:9pt Tahoma;
+	color:#666;
+	background: url(../../images/fondo_boxes.gif) repeat-x bottom;
+	border:1px solid #ccc;
+}
+
+#content #main form div div.opciones	{
+	width:450px;
+	margin:0 0 0 300px;
+}
+
+#content #main form div div.opciones input	{
+	width:12px;
+	height:12px;
+}
+
+#content #main form div.enviar	{
+	/*margin:20px 0 0 0;*/
+	text-align:center;
+	height:22px;
+}
+
+#content #main form div.enviar2	{
+	/*margin:20px 0 0 0;
+	text-align:center;*/
+	height:22px;
+}
+
+#content #main form div.enviar input	{
+	border:none;
+	background:none;
+	background-color:#326395;
+	font:bold 12px Tahoma;
+	color:#fff;
+	height:22px;
+	padding:-1px 0 0 0;
+}
+
+#content #main form div.enviar2 input	{
+	border:none;
+	background:none;
+	background-color:#326395;
+	font:bold 12px Tahoma;
+	color:#fff;
+	height:22px;
+	padding:-1px 0 0 0;
+}
+
+/****************
+errores
+****************/
+#content #main form div#error	{
+	text-align:center;
+	font:bold 10pt Tahoma;
+	color:#f00;
+}
+
+/******************************************
+EDITOR DE TEXTO
+******************************************/
+#content #main form div.text textarea	{
+	height: 500px;
+}
+/*
+#formu div.text div	{
+	margin-left:105px;
+}
+*/
+#content #main form div.text div	 div#iconos	{
+	margin-left:0;
+}
+
+#content #main form div select.mceSelectList {
+	font-family: 'MS Sans Serif', sans-serif, Verdana, Arial;
+	font-size: 7pt !important;
+	font-weight: normal;
+	margin-top: 3px;
+	padding: 0;
+	display: inline;
+	vertical-align: top;
+	background-color: #F0F0EE;
+	width:100px;
+}
+
+/*****************
+ buscador
+ *****************/
+#content #main form div#buscador	{
+	background-color:#efefef;
+	width:740px;
+	border:1px solid #ccc;
+	margin:0 0 0 15px;
+}
+
+#content #main form div#buscador h3	{
+	font: bolf 12pt Tahoma;
+	color:#999;
+	border:none;
+	margin:3px 0 5px 3px;
+	padding:0;
+	width:200px;
+}
+
+#content #main form div#buscador div	{
+	margin:3px 0 0 0;
+}
+
+#content #main form div#buscador div label	{
+	width:120px;
+	float:left;
+}
+
+#content #main form div#buscador div select,
+#content #main form div#buscador div input	{
+	float:left;
+}
+
+/****************************************
+LISTADO DE TAGS
+****************************************/
+
+#content #main form div ul#tags	{
+	float:left;
+	width:600px;
+	list-style-type: none;
+}
+
+#content #main form div ul#tags li	{
+	width:150px;
+	float:left;
+}
+
+#content #main form div ul#tags li input	{
+	margin:0 5px 0 0;
+}
+
+/************************
+select multiples
+************************/
+/***/
+#content #main form div div.trans_sel	{
+	width:210px;
+	height:300px;
+	float:left;
+}
+
+#content #main form div div.trans_bot	{
+	width:50px;
+	float:left;
+}
+
+#content #main form div div.trans_bot input.flechas	{
+	width:30px;
+}
