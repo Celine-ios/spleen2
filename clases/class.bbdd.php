@@ -11,7 +11,7 @@ class bbdd {
   public function __construct() {
 
     $this->host = BASE_HOST;
-    $this->usuario = BASE_USER;
+    $this->usuario = BASE_USER;    
     $this->pass = BASE_PASS;
     $this->bd = BASE_BASE;
     
@@ -36,8 +36,10 @@ class bbdd {
   }
 
   public function bbdd_query( $sql ) {
+    
+      $conex = mysqli_connect( $this->host, $this->usuario, $this->pass);
 
-    $r = mysqli_query( $sql, $this->conn ) or die( mysqli_error($conex));
+    $r = mysqli_query(  $this->conn,$sql) or die( mysqli_error($conex));
     
     return $r;
     
