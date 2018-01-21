@@ -11,7 +11,7 @@ class bbdd {
   public function __construct() {
 
     $this->host = BASE_HOST;
-    $this->usuario = BASE_USER;    
+    $this->usuario = BASE_USER;
     $this->pass = BASE_PASS;
     $this->bd = BASE_BASE;
     
@@ -36,10 +36,10 @@ class bbdd {
   }
 
   public function bbdd_query( $sql ) {
-    
+
       $conex = mysqli_connect( $this->host, $this->usuario, $this->pass);
 
-    $r = mysqli_query(  $this->conn,$sql) or die( mysqli_error($conex));
+    $r = mysqli_query( $this->conn,$sql) or die( mysqli_error($conex));
     
     return $r;
     
@@ -55,7 +55,7 @@ class bbdd {
 
   public function bbdd_num( $r ) {
 
-    $cant = mysql_num_rows( $r );
+    $cant = mysqli_num_rows( $r );
     
     return $cant;
     
@@ -65,7 +65,7 @@ class bbdd {
 
     $r = $this->bbdd_query( $sql );
     
-    $cant = mysql_num_rows( $r );
+    $cant = mysqli_num_rows( $r );
     
     return $cant;
     
@@ -81,18 +81,21 @@ class bbdd {
 
   public function bbdd_desc() {
 
-    mysql_close();
+
+      $conex = mysqli_connect( $this->host, $this->usuario, $this->pass);
+
+    mysqli_close($conex);
   }
 
   public function bbdd_seguridad( $valor ) {
 
-    return mysql_real_escape_string( stripslashes( $valor ) );
+    return mysqli_real_escape_string( stripslashes( $valor ));
     
   }
 
   public function bbdd_afectadas() {
 
-    return mysql_affected_rows( $this->conn );
+    return mysqli_affected_rows( $this->conn );
     
   }
 
@@ -100,7 +103,7 @@ class bbdd {
 
     $r = $this->bbdd_query( 'SELECT ' . $campo . ' FROM ' . $tabla . ' ' . $where );
     
-    $row = mysql_fetch_array( $r,$this->conn);
+    $row = mysqli_fetch_array( $r,MYSQLI_ASSOC);
     
     return $row[ $campo ];
     
