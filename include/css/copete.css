@@ -1,0 +1,28 @@
+#copete	{
+	background-color:#efefef;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	width:750px;
+}
+
+#copete span{
+	margin: 0;
+	padding: 0;
+	font: 16pt Tahoma;
+	color:#326395;
+}
+
+#copete p	{
+	margin:5px 0 5px 0;
+	padding:0;
+	font: 8pt Tahoma;
+	color: #666;
+}
+
+#copete a:link,
+#copete a:visited,
+#copete a:hover	{
+	text-decoration:none;
+	font: bold 8pt Tahoma;
+	color: #666;
+}

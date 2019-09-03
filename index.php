@@ -1,39 +1,53 @@
-<?php 
-session_start(); 
-include("app/config.php");
-if( isset($_POST["log_user"]) &&  isset($_POST["log_pass"]) ){
-	$ob_user = new user();
-	$resp = $ob_user->login($_POST["log_user"],$_POST["log_pass"]);
-}
-$_title = "BeMarketing";
-$_page = "";
-include("_head_html.inc.php");
-?>
-<div id="table">
-<div id="cell">
-	<div class="cont">
-		<div class="cont_login">
-			<div id="pizarra">
-				<form method="post" action="">
-					<input type="text" name="log_user" id="inp1" />
-					<input type="password" name="log_pass" id="inp2" />
-					<input type="submit" name="" value="" id="btn1" />
-				</form>
-			</div>
-			<?php
-			if( isset($resp) && !empty($resp ) ){
-			?>
-			<div id="resp_login">El usuario y/o la contraseña no son correctos.</div>
-			<?php
-			}
-			?>
+<?php
+session_start();
+//$include = (isset($_GET["link"]))?$_GET["link"]:"_include-home.php";
+include 'include/php/config/config.php';
+include 'include/php/utils.php';
+include 'clases/class.bbdd.php';
+include 'clases/class.login.php';
+include 'clases/class.seguridad.php';
+include 'clases/class.gral.php';
+$seguridad->verificar();
+
+			if( $seguridad->estado == 1 ) {
+				include $seguridad->decodificarURL();
+			} else {
+				include PATH_LOGIN;
+		  } ?>
 		</div>
-	</div>
-</div>
-</div>
-<script type="text/javascript" src="js/jquery.js"></script>
-<!--[if IE 6]>
-<script type="text/javascript" src="js/fixpng.js"></script>
-<![endif]-->
+		<div id="footer">Todos los derechos reservados</div>
+	</div>	
+
+<script type="text/javascript">
+$().ready(function() {
+	$("#id_tags").autocomplete('gettags.php', {
+		multiple: true,
+		mustMatch: true,
+		/*cacheLength: 0,*/
+		autoFill: true,
+		selectFirst: true,
+		extraParams: {
+			t: function() {
+				return $("#id_tags").val()
+			}
+		},
+		formatItem: formatItem,
+		formatResult: formatResult
+	} );
+});
+
+function formatItem(row) {
+	return row[0];
+}
+
+function formatResult(row) {
+	return row[0];
+}
+
+function getTags() {
+	return $("#id_tags").get(0).value;
+}
+</script>
+
 </body>
 </html>
